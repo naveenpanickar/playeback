@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PLAYeBACK — Every product deserves another season.</title>
+<title>PLAYeBACK&#8482; — Every product deserves another season.</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -21,12 +21,12 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--cream);
   color: var(--deep);
   overflow-x: hidden;
+  padding-top: 64px;
 }
 
 /* NAV */
@@ -37,6 +37,7 @@ nav {
   background: rgba(253,246,236,0.92);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid rgba(186,117,23,0.15);
+
 }
 .nav-logo { font-family: 'Playfair Display', serif; font-size: 22px; color: var(--coral); letter-spacing: -0.5px; }
 .nav-logo span { color: var(--amber); }
@@ -52,12 +53,31 @@ nav {
 }
 .nav-cta:hover { background: var(--bark); transform: translateY(-1px); }
 
+/* LAUNCH BANNER */
+.launch-banner {
+  background: var(--deep);
+  padding: 9px 40px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.lb-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; flex-wrap: wrap;
+}
+.lb-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--coral); animation: pulse 2s infinite; flex-shrink: 0; }
+@keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.3} }
+.lb-txt { font-size: 12.5px; color: #FAC775; }
+.lb-link { font-size: 12.5px; font-weight: 600; color: var(--coral); text-decoration: none; }
+.lb-link:hover { color: #FAC775; }
+
 /* HERO */
 .hero {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 120px 40px 80px;
+  padding: 20px 40px 20px;
   gap: 60px;
   align-items: center;
   position: relative;
@@ -180,6 +200,69 @@ nav {
   font-family: 'DM Mono', monospace;
 }
 
+/* PILOT STRIP */
+.pilot-strip {
+  background: linear-gradient(90deg, var(--coral), var(--amber));
+  padding: 13px 40px; text-align: center;
+}
+.pilot-strip-inner {
+  max-width: 1100px; margin: 0 auto;
+  font-size: 13.5px; font-weight: 500; color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  gap: 14px; flex-wrap: wrap;
+}
+.pilot-chip {
+  background: rgba(255,255,255,.2); border-radius: 20px;
+  padding: 4px 13px; font-size: 12px;
+}
+
+/* SHARED SECTION UTILS */
+.sec-label { font-size: 11px; font-weight: 500; color: var(--coral); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.sec-title { font-family: 'Playfair Display', serif; font-size: clamp(28px,3.5vw,44px); font-weight: 700; color: var(--deep); letter-spacing: -1px; margin-bottom: 8px; }
+.sec-sub { font-size: 15px; font-weight: 300; color: var(--bark); line-height: 1.68; max-width: 560px; }
+
+/* SOLUTIONS */
+.solutions { padding: 96px 40px; background: var(--cream); }
+.solutions-inner { max-width: 1200px; margin: 0 auto; }
+.sol-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 44px; }
+.sol-card {
+  background: #fff; border-radius: 20px;
+  border: 1px solid rgba(186,117,23,.15);
+  padding: 28px; transition: all .2s;
+}
+.sol-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(65,36,2,.1); border-color: rgba(216,90,48,.3); }
+.sol-card.pilot-card { border-color: var(--coral); border-width: 2px; position: relative; }
+.pilot-tag {
+  position: absolute; top: -12px; left: 22px;
+  background: var(--coral); color: #fff;
+  font-size: 10px; font-weight: 600; padding: 3px 12px;
+  border-radius: 20px; letter-spacing: .5px; text-transform: uppercase;
+}
+.sol-icon { font-size: 30px; margin-bottom: 12px; }
+.sol-title { font-size: 17px; font-weight: 500; color: var(--deep); margin-bottom: 7px; font-family: 'Playfair Display', serif; }
+.sol-desc { font-size: 13.5px; color: var(--muted); line-height: 1.65; margin-bottom: 13px; }
+.sol-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.sol-tag { font-size: 11px; font-weight: 500; padding: 4px 11px; border-radius: 20px; background: var(--warm); color: var(--bark); border: 1px solid rgba(186,117,23,.2); }
+
+/* SAFESCORE */
+.safescore { background: var(--deep); padding: 96px 40px; position: relative; overflow: hidden; }
+.safescore-inner { max-width: 1100px; margin: 0 auto; }
+.safescore-lbl { font-size: 11px; font-weight: 500; color: var(--coral); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.safescore h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px,3.5vw,44px); font-weight: 700; color: #FAC775; letter-spacing: -1px; margin-bottom: 10px; }
+.safescore-sub { font-size: 15px; color: #EF9F27; font-weight: 300; line-height: 1.7; max-width: 520px; margin-bottom: 44px; }
+.score-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+.score-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 16px; padding: 24px; transition: background .2s;
+}
+.score-card:hover { background: rgba(255,255,255,.09); }
+.score-cat { font-size: 11px; font-weight: 500; color: var(--coral); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 8px; }
+.score-val { font-family: 'Playfair Display', serif; font-size: 36px; font-weight: 700; color: #FAC775; margin-bottom: 4px; }
+.score-desc { font-size: 13px; color: #888; line-height: 1.5; }
+.score-bar { height: 4px; border-radius: 2px; background: rgba(255,255,255,.1); margin-top: 14px; overflow: hidden; }
+.score-fill { height: 100%; border-radius: 2px; background: linear-gradient(90deg, var(--coral), var(--amber)); }
+
+
 /* STORY */
 .story {
   background: var(--deep);
@@ -268,6 +351,53 @@ nav {
   animation: pulse 2s ease-in-out infinite;
 }
 @keyframes pulse { 0%,100%{opacity:0.3} 50%{opacity:0.8} }
+
+/* REPLAY */
+.replay { padding: 96px 40px; background: var(--sand); }
+.replay-inner { max-width: 1200px; margin: 0 auto; }
+.replay-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-top: 40px; }
+.replay-card {
+  background: #fff; border-radius: 16px; padding: 20px;
+  border: 1px solid rgba(186,117,23,.15); transition: all .2s;
+}
+.replay-card:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(65,36,2,.08); }
+.rc-icon { font-size: 26px; margin-bottom: 8px; }
+.rc-name { font-size: 13.5px; font-weight: 500; color: var(--deep); margin-bottom: 3px; }
+.rc-price { font-size: 16px; font-weight: 700; color: var(--coral); margin-bottom: 5px; font-family: 'Playfair Display', serif; }
+.rc-grade { display: inline-block; font-size: 10px; font-weight: 600; padding: 3px 10px; border-radius: 20px; }
+.rc-details { font-size: 12px; color: var(--muted); margin-top: 8px; line-height: 1.5; }
+
+/* PRO */
+.pro { padding: 96px 40px; background: var(--deep); }
+.pro-inner { max-width: 1200px; margin: 0 auto; }
+.pro-lbl { font-size: 11px; font-weight: 500; color: var(--coral); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.pro h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px,3.5vw,44px); font-weight: 700; color: #FAC775; letter-spacing: -1px; margin-bottom: 8px; }
+.pro-sub { font-size: 15px; color: #EF9F27; font-weight: 300; max-width: 520px; margin-bottom: 44px; line-height: 1.7; }
+.pro-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.pro-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 20px; padding: 28px; transition: all .2s;
+}
+.pro-card:hover { background: rgba(255,255,255,.09); transform: translateY(-3px); }
+.pro-card.featured { background: rgba(216,90,48,.12); border-color: var(--coral); }
+.pro-name { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--coral); margin-bottom: 8px; }
+.pro-title { font-family: 'Playfair Display', serif; font-size: 18px; color: #FAC775; margin-bottom: 16px; }
+.pro-items { display: flex; flex-direction: column; gap: 7px; }
+.pro-item { font-size: 13px; color: #D3D1C7; padding-left: 16px; position: relative; }
+.pro-item::before { content: "✓"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
+
+/* CUSTOMERS */
+.customers { padding: 80px 40px; background: var(--cream); }
+.customers-inner { max-width: 1100px; margin: 0 auto; }
+.customer-grid { display: grid; grid-template-columns: repeat(6,1fr); gap: 12px; margin-top: 36px; }
+.cust-card {
+  background: #fff; border-radius: 14px; padding: 18px 12px;
+  text-align: center; border: 1px solid rgba(186,117,23,.15); transition: all .2s;
+}
+.cust-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(65,36,2,.08); border-color: rgba(216,90,48,.3); }
+.cust-icon { font-size: 26px; margin-bottom: 8px; }
+.cust-name { font-size: 12px; font-weight: 500; color: var(--deep); }
+
 
 /* CITY WAITLIST */
 .waitlist {
@@ -420,6 +550,8 @@ footer {
 .footer-logo { font-family: 'Playfair Display', serif; font-size: 24px; color: var(--coral); }
 .footer-logo span { color: var(--amber); }
 .footer-tagline { font-size: 13px; color: #EF9F27; margin-top: 6px; font-weight: 300; }
+.footer-ecosystem { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+.fe-chip { font-size: 11px; padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(186,117,23,.3); color: #EF9F27; }
 .footer-links { display: flex; gap: 32px; }
 .footer-links a { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: #FAC775; }
@@ -473,28 +605,40 @@ footer {
 <nav>
   <div class="nav-logo">PLAY<span>e</span>BACK</div>
   <div class="nav-links">
+    <a href="#solutions">Services</a>
     <a href="#story">Our story</a>
     <a href="#how">How it works</a>
-    <a href="#waitlist">Get early access</a>
-    <a href="#gear">Submit gear</a>
+    <a href="#replay">Replay&#8482;</a>
+    <a href="#pro">Pro plans</a>
+    <a href="#waitlist">Early access</a>
+
   </div>
   <button class="nav-cta" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
 </nav>
+
+<!-- LAUNCH BANNER -->
+<div class="launch-banner">
+  <div class="lb-inner">
+    <div class="lb-dot"></div>
+    <span class="lb-txt">&#128640; Bengaluru pilot launching &nbsp;&middot;&nbsp; Sports Academies + Cycling Clubs + Gated Communities</span>
+    <a href="#waitlist" class="lb-link">Get early access &#8594;</a>
+  </div>
+</div>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow"><span>▶</span> Launching in Bengaluru &nbsp;·&nbsp; <span>⏸</span> Coming to Mumbai &nbsp;·&nbsp; <span>↩</span> Then Chennai</div>
     <h1>Great gear.<br><em>Every season.</em><br>For every child.</h1>
-    <p class="hero-sub">PLAYeBACK is a managed recommerce and rental marketplace for children's cycles, toys, and sports gear. We collect, refurbish, certify and redistribute — so quality products never gather dust.</p>
+    <p class="hero-sub">PLAYeBACK&#8482; is India&#8217;s first active lifestyle asset lifecycle platform &#8212; caring for toys, sports gear, footwear, cycles, e-bikes and play spaces. We clean, certify, refurbish and redistribute so every asset earns another season.</p>
     <div class="rhythm-row">
       <div class="rhythm-pill"><span class="icon">▶</span> Play — access</div>
-      <div class="rhythm-pill"><span class="icon">⏸</span> Pause — return</div>
+      <div class="rhythm-pill"><span class="icon">⏸</span> Pause — care</div>
       <div class="rhythm-pill"><span class="icon">↩</span> Replay — relive</div>
     </div>
     <div class="hero-btns">
       <a href="#waitlist" class="btn-main">Join the waitlist</a>
-      <a href="#gear" class="btn-ghost">Submit your gear</a>
+      <a href="#solutions" class="btn-ghost">Explore services</a>
     </div>
   </div>
   <div class="hero-right">
@@ -515,14 +659,127 @@ footer {
   </div>
 </section>
 
+
+<!-- PILOT STRIP -->
+<div class="pilot-strip">
+  <div class="pilot-strip-inner">
+    <strong>Bengaluru Pilot &#8212; ActiveLife Pack</strong>
+    <span class="pilot-chip">&#9917; Sports gear refresh</span>
+    <span class="pilot-chip">&#128247; Footwear hygiene</span>
+    <span class="pilot-chip">&#128690; Cycle safety check</span>
+    <span class="pilot-chip">&#129408; Toy care</span>
+    <span class="pilot-chip">&#128202; SafeScore Lite report</span>
+  </div>
+</div>
+
+
+<!-- SOLUTIONS -->
+<section class="solutions" id="solutions">
+  <div class="solutions-inner">
+    <div class="sec-label">PLAYeBACK Care&#8482;</div>
+    <div class="sec-title">Six asset care categories.</div>
+    <p class="sec-sub">From a toy to an e-bike fleet &#8212; we clean, restore, certify and give every active-use asset a second life. Every service produces a PLAYeBACK SafeScore&#8482; report.</p>
+    <div class="sol-grid">
+      <div class="sol-card pilot-card">
+        <div class="pilot-tag">Pilot Active</div>
+        <div class="sol-icon">&#127959;</div>
+        <div class="sol-title">Sports Gear Care</div>
+        <p class="sol-desc">Deep cleaning, sanitization and restoration for helmets, bats, gloves, pads, yoga mats, academy kits, rackets and skates.</p>
+        <div class="sol-tags"><span class="sol-tag">Helmets</span><span class="sol-tag">Cricket kits</span><span class="sol-tag">Rackets</span><span class="sol-tag">Pads &amp; gloves</span></div>
+      </div>
+      <div class="sol-card pilot-card">
+        <div class="pilot-tag">Pilot Active</div>
+        <div class="sol-icon">&#128247;</div>
+        <div class="sol-title">Footwear Care</div>
+        <p class="sol-desc">Deep cleaning, deodorization, sanitization, sole restoration, lace replacement and waterproof treatment for all active footwear.</p>
+        <div class="sol-tags"><span class="sol-tag">Football boots</span><span class="sol-tag">Cricket shoes</span><span class="sol-tag">School shoes</span><span class="sol-tag">Running shoes</span></div>
+      </div>
+      <div class="sol-card pilot-card">
+        <div class="pilot-tag">Pilot Active</div>
+        <div class="sol-icon">&#128690;</div>
+        <div class="sol-title">Cycle &amp; E-Bike Care</div>
+        <p class="sol-desc">Full servicing &#8212; chain care, brake checks, lubrication, tyre pressure, safety inspection and battery health checks for e-bikes.</p>
+        <div class="sol-tags"><span class="sol-tag">Kids cycles</span><span class="sol-tag">MTB</span><span class="sol-tag">E-bikes</span><span class="sol-tag">Academy fleets</span></div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">&#129408;</div>
+        <div class="sol-title">Toy Care</div>
+        <p class="sol-desc">Deep cleaning, sanitization, restoration and repair of educational toys, STEM sets, board games and soft play assets for families and schools.</p>
+        <div class="sol-tags"><span class="sol-tag">STEM sets</span><span class="sol-tag">Board games</span><span class="sol-tag">Soft play</span><span class="sol-tag">Pre-school</span></div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">&#128737;</div>
+        <div class="sol-title">Ride Safety Gear Care</div>
+        <p class="sol-desc">Cleaning, inspection and certification of cycling helmets, knee guards, elbow guards, riding gloves and reflective gear.</p>
+        <div class="sol-tags"><span class="sol-tag">Helmets</span><span class="sol-tag">Knee guards</span><span class="sol-tag">Riding gloves</span><span class="sol-tag">Reflective gear</span></div>
+      </div>
+      <div class="sol-card">
+        <div class="sol-icon">&#127967;</div>
+        <div class="sol-title">Space Care</div>
+        <p class="sol-desc">Indoor preschool playrooms and soft play. Outdoor playgrounds, cycle tracks, sports courts and community play areas &#8212; hygiene and safety audits.</p>
+        <div class="sol-tags"><span class="sol-tag">Playrooms</span><span class="sol-tag">Playgrounds</span><span class="sol-tag">Courts</span><span class="sol-tag">Cycle tracks</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SAFESCORE -->
+<section class="safescore" id="safescore">
+  <div class="safescore-inner">
+    <div class="safescore-lbl">PLAYeBACK SafeScore&#8482;</div>
+    <h2>Every asset. Every space.<br>A trust score.</h2>
+    <p class="safescore-sub">After every PLAYeBACK Care&#8482; service, each asset receives a SafeScore&#8482; &#8212; a verified hygiene and condition report. Parents, coaches and fleet managers see exactly what they&#8217;re getting.</p>
+    <div class="score-grid">
+      <div class="score-card">
+        <div class="score-cat">Toy Hygiene</div>
+        <div class="score-val">91</div>
+        <p class="score-desc">Deep clean + sanitization + safety check. No chemical residues, no loose parts.</p>
+        <div class="score-bar"><div class="score-fill" style="width:91%"></div></div>
+      </div>
+      <div class="score-card">
+        <div class="score-cat">Sports Gear Health</div>
+        <div class="score-val">89</div>
+        <p class="score-desc">Full kit inspection, structural integrity, padding check, strap condition.</p>
+        <div class="score-bar"><div class="score-fill" style="width:89%"></div></div>
+      </div>
+      <div class="score-card">
+        <div class="score-cat">Footwear Condition</div>
+        <div class="score-val">85</div>
+        <p class="score-desc">Sole condition, deodorization, waterproofing, structural integrity score.</p>
+        <div class="score-bar"><div class="score-fill" style="width:85%"></div></div>
+      </div>
+      <div class="score-card">
+        <div class="score-cat">Cycle Safety</div>
+        <div class="score-val">90</div>
+        <p class="score-desc">Brake performance, tyre pressure, chain wear, handlebar and saddle stability.</p>
+        <div class="score-bar"><div class="score-fill" style="width:90%"></div></div>
+      </div>
+      <div class="score-card">
+        <div class="score-cat">Indoor Play Safety</div>
+        <div class="score-val">87</div>
+        <p class="score-desc">Surface hygiene, anchor points, padding coverage, hazard-free certification.</p>
+        <div class="score-bar"><div class="score-fill" style="width:87%"></div></div>
+      </div>
+      <div class="score-card">
+        <div class="score-cat">Ride Safety Gear</div>
+        <div class="score-val">93</div>
+        <p class="score-desc">Helmet shell integrity, strap function, guard coverage, reflectivity test.</p>
+        <div class="score-bar"><div class="score-fill" style="width:93%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <!-- BRAND STORY -->
 <section class="story" id="story">
   <div class="story-inner">
     <div class="story-label">Our story</div>
     <h2>Children outgrow everything.<br>The products don't go anywhere.</h2>
     <div class="story-body">
-      <p class="story-p">A bicycle bought for <strong>₹8,000</strong> is ridden for 14 months — then parked in a storeroom forever. A cricket kit. Roller blades. Football boots. All bought with enthusiasm, outgrown with inevitability, and discarded with guilt.<br><br>Less than <strong>4% of used sporting goods</strong> in India are resold through any organised channel. Billions of rupees of quality gear is gathering dust in Indian homes right now.</p>
-      <p class="story-p">PLAYeBACK exists to flip this story. We built a <strong>managed circular loop</strong> — every product is collected, refurbished, certified with its full history, and redistributed to the next family at a fraction of the new price.<br><br>No strangers. No haggling. No anxiety. Just <strong>trust, built product by product</strong> — and a credit in your wallet for every item you hand back.</p>
+      <p class="story-p">A bicycle bought for <strong>&#8377;8,000</strong> is ridden for 14 months &#8212; then parked in a storeroom forever. Football boots. Cricket kits. Roller blades. School shoes worn twice. All bought with enthusiasm, outgrown with inevitability, discarded with guilt.<br><br>Less than <strong>4% of used sporting goods</strong> in India are resold or recirculated through any organised channel. Billions in quality assets gather dust in Indian homes every year.</p>
+      <p class="story-p">PLAYeBACK&#8482; exists to flip this story. We built a <strong>managed active lifecycle platform</strong> &#8212; every asset is collected, cared for, certified with a full SafeScore&#8482; and redistributed to its next family, academy or community.<br><br>No strangers. No haggling. No anxiety. <strong>Play. Pause. Replay.</strong></p>
       <div class="story-quote">"Every product deserves another season."</div>
     </div>
   </div>
@@ -533,47 +790,187 @@ footer {
   <div class="how-inner">
     <div class="section-header">
       <div class="section-label">How it works</div>
-      <div class="section-title">The PLAYeBACK loop</div>
+      <div class="section-title">The PLAYeBACK&#8482; loop</div>
     </div>
     <div class="steps">
       <div class="step">
         <div class="step-num">01 / PLAY</div>
         <div class="step-icon-wrap" style="background:#FAEEDA">▶</div>
-        <h3>Access quality gear</h3>
-        <p>Browse certified pre-owned cycles, toys and sports gear at 40–60% off retail. Buy outright or rent by the month — no long-term commitment needed.</p>
-        <span class="step-tag" style="background:#FAEEDA;color:#633806">Buy or rent</span>
+        <h3>Access certified assets</h3>
+        <p>Browse certified pre-owned cycles, sports gear, footwear and toys at 40&#8211;60% off retail. Buy outright, rent monthly, or subscribe to a PLAYeBACK Pro&#8482; plan.</p>
+        <span class="step-tag" style="background:#FAEEDA;color:#633806">Buy &#183; Rent &#183; Subscribe</span>
       </div>
       <div class="step">
         <div class="step-num">02 / PAUSE</div>
         <div class="step-icon-wrap" style="background:#E1F5EE">⏸</div>
-        <h3>Return when outgrown</h3>
-        <p>When your child moves on, schedule a free doorstep pickup. We collect, inspect and grade your item. You receive PLAYeBACK Credits instantly — no haggling, no strangers.</p>
-        <span class="step-tag" style="background:#E1F5EE;color:#085041">Free pickup</span>
+        <h3>Return, care or refresh</h3>
+        <p>When an asset is outgrown or needs care, schedule a free doorstep pickup. Our care team deep-cleans, restores and re-certifies &#8212; you receive PLAYeBACK&#8482; Credits and a fresh SafeScore&#8482;.</p>
+        <span class="step-tag" style="background:#E1F5EE;color:#085041">Free pickup &#183; Credits issued</span>
       </div>
       <div class="step">
         <div class="step-num">03 / REPLAY</div>
         <div class="step-icon-wrap" style="background:#EEEDFE">↩</div>
-        <h3>It finds its next home</h3>
-        <p>Every returned product goes through the PLAYeBACK process — cleaned, repaired, graded A/B/C, and certified with a QR-coded full history. Then listed for the next family.</p>
-        <span class="step-tag" style="background:#EEEDFE;color:#3C3489">Certified & relisted</span>
+        <h3>Certified second life</h3>
+        <p>Every returned asset goes through the PLAYeBACK&#8482; process &#8212; cleaned, restored, graded A/B/C, SafeScore&#8482; certified with a QR-coded history, and listed on the Replay&#8482; marketplace.</p>
+        <span class="step-tag" style="background:#EEEDFE;color:#3C3489">Certified &#183; Replay marketplace</span>
       </div>
     </div>
     <div class="loop-visual">
-      <div class="loop-node"><div class="loop-icon">👨‍👩‍👧</div><div class="loop-label">Family returns gear</div></div>
-      <div class="loop-arrow">→</div>
-      <div class="loop-node"><div class="loop-icon">🔧</div><div class="loop-label">PLAYeBACK refurbishes</div></div>
-      <div class="loop-arrow">→</div>
-      <div class="loop-node"><div class="loop-icon">✅</div><div class="loop-label">Certified & relisted</div></div>
+      <div class="loop-node"><div class="loop-icon">&#128106;</div><div class="loop-label">Family / Academy returns</div></div>
+      <div class="loop-arrow">&#8594;</div>
+      <div class="loop-node"><div class="loop-icon">&#128295;</div><div class="loop-label">PLAYeBACK&#8482; cares</div></div>
+      <div class="loop-arrow">&#8594;</div>
+      <div class="loop-node"><div class="loop-icon">&#9989;</div><div class="loop-label">SafeScore&#8482; certified</div></div>
     </div>
   </div>
 </section>
 
+
+<!-- REPLAY MARKETPLACE -->
+<section class="replay" id="replay">
+  <div class="replay-inner">
+    <div class="sec-label">PLAYeBACK Replay&#8482;</div>
+    <h2 class="sec-title">Certified. Replayed. Loved again.</h2>
+    <p class="sec-sub">The Replay&#8482; marketplace carries certified pre-owned inventory across every category &#8212; every listing has a SafeScore&#8482; and a QR-coded asset history.</p>
+    <div class="replay-grid">
+      <div class="replay-card">
+        <div class="rc-icon">&#128690;</div>
+        <div class="rc-name">Firefox 20&#8243; cycle</div>
+        <div class="rc-price">&#8377;3,200</div>
+        <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 92</div>
+        <p class="rc-details">Full service record &#183; Chain replaced &#183; QR history included</p>
+      </div>
+      <div class="replay-card">
+        <div class="rc-icon">&#128247;</div>
+        <div class="rc-name">Adidas football boots</div>
+        <div class="rc-price">&#8377;680</div>
+        <div class="rc-grade" style="background:var(--warm);color:var(--bark)">Grade B &#183; Restored</div>
+        <p class="rc-details">Sole restored &#183; Deodorized &#183; Size 6 &#183; Lightly worn</p>
+      </div>
+      <div class="replay-card">
+        <div class="rc-icon">&#127959;</div>
+        <div class="rc-name">SG junior cricket kit</div>
+        <div class="rc-price">&#8377;1,800</div>
+        <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 89</div>
+        <p class="rc-details">Full set &#183; Pads inspected &#183; Bat grip replaced</p>
+      </div>
+      <div class="replay-card">
+        <div class="rc-icon">&#9968;</div>
+        <div class="rc-name">Skates size 4 (adjustable)</div>
+        <div class="rc-price">&#8377;1,100</div>
+        <div class="rc-grade" style="background:var(--warm);color:var(--bark)">Grade B &#183; Certified</div>
+        <p class="rc-details">Blade check passed &#183; Buckle function verified</p>
+      </div>
+      <div class="replay-card">
+        <div class="rc-icon">&#128756;</div>
+        <div class="rc-name">Micro scooter (6&#8211;10 yr)</div>
+        <div class="rc-price">&#8377;1,450</div>
+        <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 91</div>
+        <p class="rc-details">Handlebar lock inspected &#183; Wheel bearings replaced</p>
+      </div>
+      <div class="replay-card">
+        <div class="rc-icon">&#129408;</div>
+        <div class="rc-name">LEGO Creator 3-in-1</div>
+        <div class="rc-price">&#8377;920</div>
+        <div class="rc-grade" style="background:var(--warm);color:var(--bark)">Grade B &#183; Sanitized</div>
+        <p class="rc-details">All pieces verified &#183; Deep sanitized &#183; No residue</p>
+      </div>
+      <div class="replay-card">
+        <div class="rc-icon">&#128692;</div>
+        <div class="rc-name">Hero Sprint MTB</div>
+        <div class="rc-price">&#8377;6,800</div>
+        <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 94</div>
+        <p class="rc-details">Full refurbish &#183; Gear cables replaced &#183; Brake pads new</p>
+      </div>
+      <div class="replay-card" style="background:var(--warm);border:1.5px dashed rgba(216,90,48,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px">
+        <div style="font-size:28px">&#43;</div>
+        <div style="font-size:13.5px;font-weight:500;color:var(--bark)">Submit your gear</div>
+        <div style="font-size:12px;color:var(--muted)">Earn credits &#183; Free pickup</div>
+        <a href="#gear" class="btn-main" style="margin-top:10px;font-size:13px;padding:9px 20px">Submit gear &#8594;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRO PLANS -->
+<section class="pro" id="pro">
+  <div class="pro-inner">
+    <div class="pro-lbl">PLAYeBACK Pro&#8482;</div>
+    <h2>Institutional subscriptions.</h2>
+    <p class="pro-sub">Schools, academies, cycling clubs and community mobility programmes &#8212; subscribe to PLAYeBACK Pro&#8482; and get managed care, recurring service and priority SafeScore&#8482; certification for your entire fleet or inventory.</p>
+    <div class="pro-grid">
+      <div class="pro-card">
+        <div class="pro-name">Preschool Pro&#8482;</div>
+        <div class="pro-title">For play schools &amp; daycares</div>
+        <div class="pro-items">
+          <div class="pro-item">Toy care &amp; sanitization</div>
+          <div class="pro-item">Indoor play hygiene</div>
+          <div class="pro-item">Monthly play audit</div>
+          <div class="pro-item">SafeScore&#8482; reports</div>
+          <div class="pro-item">Parent-facing certificates</div>
+        </div>
+      </div>
+      <div class="pro-card featured">
+        <div class="pro-name">Academy Pro&#8482;</div>
+        <div class="pro-title">For sports academies</div>
+        <div class="pro-items">
+          <div class="pro-item">Sports gear care cycles</div>
+          <div class="pro-item">Footwear refresh service</div>
+          <div class="pro-item">Helmet sanitization</div>
+          <div class="pro-item">Cycle fleet safety checks</div>
+          <div class="pro-item">Academy kit management</div>
+        </div>
+      </div>
+      <div class="pro-card">
+        <div class="pro-name">Community Pro&#8482;</div>
+        <div class="pro-title">For gated communities</div>
+        <div class="pro-items">
+          <div class="pro-item">Playground audit &amp; care</div>
+          <div class="pro-item">Cycle parking checks</div>
+          <div class="pro-item">Shared equipment care</div>
+          <div class="pro-item">Resident care portal</div>
+          <div class="pro-item">SafeScore&#8482; public display</div>
+        </div>
+      </div>
+      <div class="pro-card">
+        <div class="pro-name">Mobility Pro&#8482;</div>
+        <div class="pro-title">For cycling &amp; fleet operators</div>
+        <div class="pro-items">
+          <div class="pro-item">Bike care &amp; maintenance</div>
+          <div class="pro-item">Safety gear audits</div>
+          <div class="pro-item">E-bike battery health</div>
+          <div class="pro-item">Fleet maintenance log</div>
+          <div class="pro-item">Rental operator support</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOMERS -->
+<section class="customers">
+  <div class="customers-inner">
+    <div class="sec-label">Who we serve</div>
+    <h2 class="sec-title">Every active lifestyle segment.</h2>
+    <p class="sec-sub">From a toddler&#8217;s first toy to an e-bike fleet &#8212; PLAYeBACK&#8482; serves the full spectrum of active lifestyle asset needs.</p>
+    <div class="customer-grid">
+      <div class="cust-card"><div class="cust-icon">&#128106;</div><div class="cust-name">Families</div></div>
+      <div class="cust-card"><div class="cust-icon">&#9917;</div><div class="cust-name">Sports Academies</div></div>
+      <div class="cust-card"><div class="cust-icon">&#128690;</div><div class="cust-name">Cycling Clubs</div></div>
+      <div class="cust-card"><div class="cust-icon">&#127979;</div><div class="cust-name">Schools</div></div>
+      <div class="cust-card"><div class="cust-icon">&#127968;</div><div class="cust-name">Communities</div></div>
+      <div class="cust-card"><div class="cust-icon">&#127881;</div><div class="cust-name">Play Centres</div></div>
+    </div>
+  </div>
+</section>
+
+
 <!-- CITY WAITLIST -->
 <section class="waitlist" id="waitlist">
   <div class="waitlist-inner">
-    <div class="section-label">City launch waitlist</div>
+    <div class="section-label">Bengaluru pilot &#8212; early access</div>
     <h2>Be first in your city.<br>Get early access.</h2>
-    <p class="waitlist-sub">PLAYeBACK launches first in Bengaluru. Sign up to get notified the moment we go live in your area — plus an exclusive early-access credit of <strong>₹250</strong> when you join.</p>
+    <p class="waitlist-sub">PLAYeBACK&#8482; pilots in Bengaluru with the ActiveLife Pack. Sign up to get notified the moment we go live in your area — plus an exclusive early-access credit of <strong>₹250</strong> when you join.</p>
     <div class="form-card" id="waitlist-form">
       <div class="form-grid">
         <div class="form-field">
@@ -606,19 +1003,21 @@ footer {
         <div class="form-field full">
           <label>Children's age group (select all that apply)</label>
           <div class="city-chips">
-            <button class="city-chip" onclick="toggleChip(this)">Toddler (1–3 yr)</button>
-            <button class="city-chip" onclick="toggleChip(this)">Young child (4–7 yr)</button>
-            <button class="city-chip" onclick="toggleChip(this)">Pre-teen (8–12 yr)</button>
-            <button class="city-chip" onclick="toggleChip(this)">Teen (13+ yr)</button>
+          <button class="city-chip" onclick="toggleChip(this)">Family</button>
+            <button class="city-chip" onclick="toggleChip(this)">Sports Academy</button>
+            <button class="city-chip" onclick="toggleChip(this)">Cycling Club</button>
+            <button class="city-chip" onclick="toggleChip(this)">School / Institution</button>
+            <button class="city-chip" onclick="toggleChip(this)">Gated Community</button>
+            <button class="city-chip" onclick="toggleChip(this)">Fleet Operator</button>
           </div>
         </div>
       </div>
       <button class="form-btn" onclick="submitWaitlist()">Reserve my early access spot →</button>
-      <p class="form-note">No spam. Ever. We'll only reach out when PLAYeBACK launches in your city.</p>
+      <p class="form-note">No spam. Ever. We'll only reach out when PLAYeBACK&#8482 launches in your city.</p>
     </div>
     <div class="success-msg" id="waitlist-success">
       <h3>You're on the list! 🎉</h3>
-      <p>We'll WhatsApp you the moment PLAYeBACK launches in your city. Your ₹250 early-access credit is reserved.<br><br>In the meantime — do you have gear to submit? Scroll down.</p>
+      <p>We'll WhatsApp you the moment PLAYeBACK&#8482 launches in your city. Your ₹250 early-access credit is reserved.<br><br>In the meantime — do you have gear to submit? Scroll down.</p>
     </div>
   </div>
 </section>
@@ -629,15 +1028,17 @@ footer {
     <div class="gear-left">
       <div class="section-label">Submit your gear</div>
       <h2>Turn outgrown gear into credits.</h2>
-      <p>Have a cycle, cricket kit, or toys your child has outgrown? Submit them to PLAYeBACK. We'll schedule a free doorstep pickup, certify your items, and credit your PLAYeBACK wallet immediately.</p>
+      <p>Have a cycle, cricket kit, football boots or toys your family or academy has outgrown? Submit to PLAYeBACK&#8482; &#8212; free doorstep pickup, certification and instant wallet credits. No haggling. Ever.</p>
       <div class="credits-breakdown">
-        <div class="credit-row"><div class="credit-item"><span>🚲</span> Bicycle (any size)</div><div class="credit-val">₹300–600 credits</div></div>
-        <div class="credit-row"><div class="credit-item"><span>🏏</span> Sports kit (full set)</div><div class="credit-val">₹200–400 credits</div></div>
-        <div class="credit-row"><div class="credit-item"><span>🛴</span> Scooter / ride-on</div><div class="credit-val">₹250–500 credits</div></div>
-        <div class="credit-row"><div class="credit-item"><span>🧸</span> Toys / STEM sets</div><div class="credit-val">₹80–200 credits</div></div>
-        <div class="credit-row"><div class="credit-item"><span>⛸</span> Skates / gear sets</div><div class="credit-val">₹150–350 credits</div></div>
+        <div class="credit-row"><div class="credit-item"><em>&#128690;</em> Bicycle (any size)</div><div class="credit-val">&#8377;300&#8211;600</div></div>
+        <div class="credit-row"><div class="credit-item"><em>&#128247;</em> Sports footwear</div><div class="credit-val">&#8377;100&#8211;300</div></div>
+        <div class="credit-row"><div class="credit-item"><em>&#127959;</em> Sports kit (full set)</div><div class="credit-val">&#8377;200&#8211;400</div></div>
+        <div class="credit-row"><div class="credit-item"><em>&#128756;</em> Scooter / ride-on</div><div class="credit-val">&#8377;250&#8211;500</div></div>
+        <div class="credit-row"><div class="credit-item"><em>&#129408;</em> Toys / STEM sets</div><div class="credit-val">&#8377;80&#8211;200</div></div>
+        <div class="credit-row"><div class="credit-item"><em>&#9968;</em> Skates / gear sets</div><div class="credit-val">&#8377;150&#8211;350</div></div>
       </div>
     </div>
+
     <div class="gear-right">
       <div class="form-card gear-card-form" id="gear-form">
         <div class="form-grid">
@@ -681,7 +1082,7 @@ footer {
       </div>
       <div class="success-msg" id="gear-success" style="margin-top:0">
         <h3>Pickup request received! ✅</h3>
-        <p>Our team will WhatsApp you within 24 hours to confirm your pickup slot. Your PLAYeBACK Credits will be issued within 48 hours of certification.<br><br>Thank you for keeping great gear in play.</p>
+        <p>Our team will WhatsApp you within 24 hours to confirm your pickup slot. Your PLAYeBACK&#8482; Credits will be issued within 48 hours of certification.<br><br>Thank you for keeping great gear in play.</p>
       </div>
     </div>
   </div>
@@ -694,17 +1095,20 @@ footer {
       <div class="trust-item"><div class="trust-num">1,240+</div><div class="trust-lbl">products in certified inventory</div></div>
       <div class="trust-item"><div class="trust-num">3,500+</div><div class="trust-lbl">families on the platform</div></div>
       <div class="trust-item"><div class="trust-num">6 days</div><div class="trust-lbl">avg. collection to listed</div></div>
-      <div class="trust-item"><div class="trust-num">91%</div><div class="trust-lbl">would recommend PLAYeBACK</div></div>
+      <div class="trust-item"><div class="trust-num">91%</div><div class="trust-lbl">would recommend PLAYeBACK&#8482;</div></div>
     </div>
     <div class="reviews">
       <div class="review">
-        <p class="review-text">"PLAYeBACK collected my son's old bicycle and I got credits towards his new scooter. Took less than a week and zero hassle. I've recommended it to every parent in my apartment."</p>
+        <p class="review-text">"PLAYeBACK&#8482; collected my son's old bicycle and I got credits towards his new scooter. Took less than a week and zero hassle. The SafeScore&#8482; report gave me the transparency I didn&#8217;t know I needed. I've recommended it to every parent in my apartment."</p>
         <div class="review-author">Priya M. · Whitefield, Bengaluru</div>
       </div>
       <div class="review">
-        <p class="review-text">"The PLAYeBACK certification badge gave me confidence I never had buying second-hand online. I knew exactly what condition the product was in. The QR history was a brilliant touch."</p>
+        <p class="review-text">"The PLAYeBACK&#8482; certification badge gave me confidence I never had buying second-hand online. I knew exactly what condition the product was in. The QR history was a brilliant touch."</p>
         <div class="review-author">Rahul S. · Powai, Mumbai</div>
       </div>
+<div class="review">
+        <p class="review-text">&#8220;Our academy submits gear every quarter. The cycle fleet check and kit sanitization report has become part of our parent communication. Coaches trust the SafeScore&#8482;. It&#8217;s become a credibility asset for us.&#8221;</p>
+        <div class="review-author">Coach Suresh &#183; Premier Football Academy, Chennai</div>
     </div>
   </div>
 </section>
@@ -715,18 +1119,34 @@ footer {
     <div>
       <div class="footer-logo">PLAY<span>e</span>BACK</div>
       <div class="footer-tagline">Every product deserves another season.</div>
-    </div>
+    
+
+<div class="footer-ecosystem">
+        <span class="fe-chip">PLAYeBACK Care&#8482;</span>
+        <span class="fe-chip">PLAYeBACK SafeScore&#8482;</span>
+        <span class="fe-chip">PLAYeBACK Replay&#8482;</span>
+        <span class="fe-chip">PLAYeBACK Pro&#8482;</span>
+      </div>
+
+</div>
     <div class="footer-links">
+      <a href="#solutions">Services</a>
+      <a href="#safescore">SafeScore&#8482;</a>
       <a href="#story">Our story</a>
       <a href="#how">How it works</a>
+      <a href="#replay">Replay&#8482;</a>
+      <a href="#pro">Pro plans</a>
       <a href="#waitlist">Waitlist</a>
       <a href="#gear">Submit gear</a>
       <a href="mailto:hello@PLAYeBACK.com">Contact</a>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-copy">© 2025 PLAYeBACK · PLAYeBACK.com · All rights reserved</div>
-    <div><a href="mailto:hello@PLAYeBACK.com" class="footer-contact">hello@PLAYeBACK.com</a></div>
+
+
+    <div class="footer-copy">© 2025 PLAYeBACK&#8482; · PLAYeBACK.com · All rights reserved</div>
+<div class="footer-copy">Play &#183; Mobility &#183; Sport &#183; Lifestyle Asset Care &#183; <a href="mailto:hello@PLAYeBACK.com" class="footer-contact">hello@PLAYeBACK.com</a></div>
+    
   </div>
 </footer>
 
