@@ -490,6 +490,75 @@ textarea { resize: vertical; min-height: 90px; }
 .success-msg h3 { font-size: 20px; color: #085041; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
 .success-msg p { font-size: 14px; color: #0F6E56; }
 
+
+/* PARTNER WAITLIST */
+.partnerwaitlist {
+  background: var(--sand);
+  padding: 64px 40px;
+}
+.partnerwaitlist-inner { max-width: 780px; margin: 0 auto; }
+.partnerwaitlist h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(30px, 3.5vw, 46px); font-weight: 700;
+  color: var(--deep); letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+.partnerwaitlist-sub { font-size: 16px; color: var(--bark); font-weight: 300; margin-bottom: 28px; line-height: 1.6; }
+.form-card {
+  background: #fff; border-radius: 24px;
+  border: 1px solid rgba(186,117,23,0.2);
+  padding: 32px;
+  margin-bottom: 16px;
+}
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+.form-field { display: flex; flex-direction: column; gap: 6px; }
+.form-field.full { grid-column: 1 / -1; }
+label { font-size: 12px; font-weight: 500; color: var(--bark); letter-spacing: 0.3px; }
+input, select, textarea {
+  border: 1.5px solid rgba(186,117,23,0.2);
+  border-radius: 10px; padding: 12px 14px;
+  font-size: 14px; color: var(--deep);
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+  width: 100%;
+}
+input:focus, select:focus, textarea:focus {
+  border-color: var(--coral);
+  box-shadow: 0 0 0 3px rgba(216,90,48,0.1);
+}
+textarea { resize: vertical; min-height: 90px; }
+.city-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.city-chip {
+  border: 1.5px solid rgba(186,117,23,0.25);
+  border-radius: 24px; padding: 8px 18px;
+  font-size: 13px; color: var(--bark); cursor: pointer;
+  transition: all 0.15s; background: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+}
+.city-chip:hover, .city-chip.active {
+  background: var(--coral); color: #fff; border-color: var(--coral);
+}
+.form-btn {
+  width: 100%; background: var(--coral); color: #fff;
+  border: none; border-radius: 30px;
+  padding: 16px; font-size: 15px; font-weight: 500;
+  cursor: pointer; transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+  margin-top: 8px;
+}
+.form-btn:hover { background: var(--deep); transform: translateY(-1px); }
+.form-note { font-size: 11px; color: var(--muted); text-align: center; margin-top: 12px; }
+.success-msg {
+  display: none; text-align: center; padding: 32px;
+  background: var(--teal-light); border-radius: 16px;
+  border: 1px solid rgba(29,158,117,0.3);
+}
+.success-msg h3 { font-size: 20px; color: #085041; margin-bottom: 8px; font-family: 'Playfair Display', serif; }
+.success-msg p { font-size: 14px; color: #0F6E56; }
+
+
 /* SUBMIT GEAR */
 .gear-form-section {
   background: #fff;
@@ -775,9 +844,10 @@ footer {
     <a href="#how">How it works</a>
     <a href="#replay">Replay&#8482;</a>
     <a href="#pro">Pro plans</a>
-    <a href="#waitlist">Early access</a>
+    <a href="#gear">Submit Gear</a>
   </div>
-  <button class="nav-cta" onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join waitlist</button>
+  
+<button class="nav-cta" onclick="document.getElementById('partnerwaitlist').scrollIntoView({behavior:'smooth'})">Become Partner</button>
   <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
   </button>
@@ -913,7 +983,149 @@ footer {
   </div>
 </section>
 
+<!-- Why Trust PLAYeBACK? -->
+<section class="story" id="story">
+  <div class="story-inner">
+    <div class="story-label">Why Trust PLAYeBACK?</div>
+    <h2>Your assets deserve more than storage.<br>They deserve care, protection, and a reliable way back.</h2>
+    <div class="story-body">
+      <p class="story-p">Handing over something you own — a cycle, ebike, baby gear, sports equipment, electronics, or seasonal item — is a big decision.</p>
+      <p class="story-p">PLAYeBACK is built to make that decision easier through verified care, transparent handling, and accountable processes.</p>
 
+      <div class="story-quote">"How PLAYeBACK Builds Trust"</div><br>
+
+
+    </div>
+  </div>
+
+  <div class="pro-inner">
+    
+    <div class="pro-grid">
+      <div class="pro-card">
+        <div class="pro-name">✓ Verified Care Network.</div>
+        <div class="pro-title"><p class="story-p">Your assets are handled by trusted, verified partners and care providers.
+<br>Every participating partner goes through verification and category-specific handling standards designed for responsible asset care<br>
+Helping improve usability, transparency, and replay readiness.
+</p></div>
+        
+      </div>
+      <div class="pro-card">
+        <div class="pro-name">✓ Documented Asset Condition</div>
+        <div class="pro-title"><p class="story-p">Before pickup or handover, your asset is digitally documented.<br> We record details such as:</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Photos & visual condition</div>
+          <div class="pro-item">Existing wear / damage notes</div>
+          <div class="pro-item">Serial numbers or identifiers (wh</div>
+          <div class="pro-item">Accessories / component checklist</div>
+          <div class="pro-item">Timestamped handover records</div>
+        </div>
+<br>
+
+<p class="story-p">You know what was handed over — and what comes back.</p>
+
+      </div>
+      <div class="pro-card">
+        <div class="pro-name">✓ Transparent Asset Journey</div>
+        <div class="pro-title"><p class="story-p">No black box.<br>
+Track your asset journey through every stage:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Pickup → Inspection → </div>
+          <div class="pro-item">Care / Maintenance → </div>
+          <div class="pro-item">Safe Holding → </div>
+          <div class="pro-item">Ready for Replay</div>
+<div class="pro-item">Re-Purpose</div>
+        </div>
+
+<br>
+
+<p class="story-p">Stay informed with status visibility throughout the process.</p>
+
+      </div>
+
+<div class="pro-card">
+        <div class="pro-name">✓ Protection & Accountability</div>
+        <div class="pro-title"><p class="story-p">Unexpected situations can happen.<br>
+PLAYeBACK is designed with protection, responsible handling, and accountability in mind to help reduce risk and increase confidence.<br>May vary by service type:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Protection options</div>
+          <div class="pro-item">policies</div>
+          <div class="pro-item">category coverage</div>
+        </div>
+      </div>
+
+<div class="pro-card">
+        <div class="pro-name">✓ Specialized Handling Standards</div>
+        <div class="pro-title"><p class="story-p">Different assets need different care.<br>
+A bicycle is not handled like baby gear. Electronics are not treated like sports equipment.<br> To support safer handling and better outcomes, PLAYeBACK uses:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">category-aware processes </div>
+          <div class="pro-item">Partner standards </div>
+        </div>
+      </div>
+
+
+<div class="pro-card">
+        <div class="pro-name">✓ Built on Reputation & Reliability</div>
+        <div class="pro-title"><p class="story-p">Trust is earned through consistent execution.<br>
+Create a transparent ecosystem for both owners and care partners through:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Verified experiences</div>
+          <div class="pro-item">Service history</div>
+          <div class="pro-item">Reliability signals</div>
+          <div class="pro-item">Customer feedback</div>
+
+        </div>
+      </div>
+
+<div class="pro-card">
+        <div class="pro-name">✓ PLAYeBACK workflow</div>
+        <div class="pro-title"><p class="story-p">Simple flow:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Request a service or asset support need</div>
+          <div class="pro-item">Pickup or handover coordination</div>
+          <div class="pro-item">Inspection & documentation</div>
+          <div class="pro-item">Care, maintenance, storage, replay, or related service workflow</div>
+<div class="pro-item">Status visibility during the journey</div>
+          <div class="pro-item">Reuse, or Repurpose for next-use outcomet</div>
+        </div>
+
+      </div>
+
+      <div class="pro-card featured">
+        <div class="pro-name"><div class="story-quote">"PLAY. PAUSE. REPLAY."</div></div>
+        <div class="pro-title"><p class="story-p">PLAYeBACK helps assets stay useful, maintained, protected, and ready for their next use cycle — without adding ownership friction<br>
+
+
+      </div>
+
+
+</p>
+
+<p class="story-p">Because ownership should not end at purchase. It should continue through care, reuse, and replay.</p>
+
+</div>
+        <div class="pro-items">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+ <div class="story-quote">"PLAYeBACK partner ecosystem, include certified service providers, specialist operators, repair partners, care centers, and logistics collaborators.<br>Handling standards depend on asset category and service type."</div><br>
+
+</section>
 <!-- SOLUTIONS -->
 <section class="solutions" id="solutions">
   <div class="solutions-inner">
@@ -923,39 +1135,39 @@ footer {
     <div class="sol-grid">
       <div class="sol-card pilot-card">
         <div class="pilot-tag">Pilot Active</div>
-        <div class="sol-icon">&#127959;</div>
+        <div class="sol-icon"></div>
         <div class="sol-title">Sports Gear Care</div>
         <p class="sol-desc">Deep cleaning, sanitization and restoration for helmets, bats, gloves, pads, yoga mats, academy kits, rackets and skates.</p>
         <div class="sol-tags"><span class="sol-tag">Helmets</span><span class="sol-tag">Cricket kits</span><span class="sol-tag">Rackets</span><span class="sol-tag">Pads &amp; gloves</span></div>
       </div>
       <div class="sol-card pilot-card">
         <div class="pilot-tag">Pilot Active</div>
-        <div class="sol-icon">&#128247;</div>
+        <div class="sol-icon"></div>
         <div class="sol-title">Footwear Care</div>
         <p class="sol-desc">Deep cleaning, deodorization, sanitization, sole restoration, lace replacement and waterproof treatment for all active footwear.</p>
         <div class="sol-tags"><span class="sol-tag">Football boots</span><span class="sol-tag">Cricket shoes</span><span class="sol-tag">School shoes</span><span class="sol-tag">Running shoes</span></div>
       </div>
       <div class="sol-card pilot-card">
         <div class="pilot-tag">Pilot Active</div>
-        <div class="sol-icon">&#128690;</div>
+        <div class="sol-icon"></div>
         <div class="sol-title">Cycle &amp; E-Bike Care</div>
         <p class="sol-desc">Full servicing &#8212; chain care, brake checks, lubrication, tyre pressure, safety inspection and battery health checks for e-bikes.</p>
         <div class="sol-tags"><span class="sol-tag">Kids cycles</span><span class="sol-tag">MTB</span><span class="sol-tag">E-bikes</span><span class="sol-tag">Academy fleets</span></div>
       </div>
       <div class="sol-card">
-        <div class="sol-icon">&#129408;</div>
+        <div class="sol-icon"></div>
         <div class="sol-title">Toy Care</div>
         <p class="sol-desc">Deep cleaning, sanitization, restoration and repair of educational toys, STEM sets, board games and soft play assets for families and schools.</p>
         <div class="sol-tags"><span class="sol-tag">STEM sets</span><span class="sol-tag">Board games</span><span class="sol-tag">Soft play</span><span class="sol-tag">Pre-school</span></div>
       </div>
       <div class="sol-card">
-        <div class="sol-icon">&#128737;</div>
+        <div class="sol-icon"></div>
         <div class="sol-title">Ride Safety Gear Care</div>
         <p class="sol-desc">Cleaning, inspection and certification of cycling helmets, knee guards, elbow guards, riding gloves and reflective gear.</p>
         <div class="sol-tags"><span class="sol-tag">Helmets</span><span class="sol-tag">Knee guards</span><span class="sol-tag">Riding gloves</span><span class="sol-tag">Reflective gear</span></div>
       </div>
       <div class="sol-card">
-        <div class="sol-icon">&#127967;</div>
+        <div class="sol-icon"></div>
         <div class="sol-title">Space Care</div>
         <p class="sol-desc">Indoor preschool playrooms and soft play. Outdoor playgrounds, cycle tracks, sports courts and community play areas &#8212; hygiene and safety audits.</p>
         <div class="sol-tags"><span class="sol-tag">Playrooms</span><span class="sol-tag">Playgrounds</span><span class="sol-tag">Courts</span><span class="sol-tag">Cycle tracks</span></div>
@@ -1021,6 +1233,80 @@ footer {
     <div class="sec-label">PLAYeBACK Replay&#8482;</div>
     <h2 class="sec-title">Certified. Replayed. Loved again.</h2>
     <p class="sec-sub">The Replay&#8482; marketplace carries certified pre-owned inventory across every category &#8212; every listing has a SafeScore&#8482; and a QR-coded asset history.</p>
+
+
+<section class="pro" id="pro">
+  <div class="pro-inner">
+    <div class="pro-lbl">HOW REPLAY WORKS</div>
+    
+    <div class="pro-grid">
+      <div class="pro-card">
+        <div class="pro-name">① CARE</div>
+        <div class="pro-title"><p class="story-p">Your asset receives applicable services.<br>
+Helping improve usability, transparency, and replay readiness.
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Inspection</div>
+          <div class="pro-item">Maintenance</div>
+          <div class="pro-item">Cleaning</div>
+          <div class="pro-item">Repair</div>
+	<div class="pro-item">Refurbishment</div>
+          <div class="pro-item">Readiness Preparation</div>
+
+        </div>
+      </div>
+      <div class="pro-card">
+        <div class="pro-name">② CERTIFY</div>
+        <div class="pro-title"><p class="story-p">Eligible assets may receive care documentation and condition verification.<br>Depending on category and service type, this may include:</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Condition assessment</div>
+          <div class="pro-item">Care history recordse</div>
+          <div class="pro-item">Inspection summaries</div>
+          <div class="pro-item">Service completion indicators</div>
+          <div class="pro-item">Replay readiness information</div>
+        </div>
+      </div>
+      <div class="pro-card">
+        <div class="pro-name">③ VALUE</div>
+        <div class="pro-title"><p class="story-p">After care and evaluation, eligible assets may receive indicative value insights.<br>
+Helping owners make informed next-step decisions. Based on factors such as:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Condition</div>
+          <div class="pro-item">Usage profile</div>
+          <div class="pro-item">Category demand</div>
+          <div class="pro-item">Care outcomes</div>
+<div class="pro-item">Partner evaluations</div>
+          <div class="pro-item">Market context</div>
+        </div>
+      </div>
+      <div class="pro-card featured">
+        <div class="pro-name">④ RePLAY</div>
+        <div class="pro-title"><p class="story-p">Instead of defaulting to return or long-term holding, owners may choose to explore RePLAY<br>
+Your asset stays useful.<br>
+You decide what happens next.
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Unlock Hidden Value</div>
+          <div class="pro-item">Reduce Storage & Ownership Burden</div>
+          <div class="pro-item">Improve Buyer Confidence</div>
+          <div class="pro-item">Support Circular Use</div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div>
+<h2 class="sec-title">Your Asset. Your Decision.</h2>
+    <div class="pro-title"><p class="story-p">PLAYeBACK supports the journey. You choose the outcome. After CARE completion, eligible owners may choose:
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Continue Service Support</div>
+          <div class="pro-item">List On RePLAY Marketplace</div>
+        </div>
+</div>
+</section>
+
     <div class="replay-grid">
       <div class="replay-card">
         <div class="rc-icon">&#128690;</div>
@@ -1175,7 +1461,7 @@ footer {
           <input type="email" placeholder="priya@email.com" id="wl-email">
         </div>
         <div class="form-field">
-          <label>Apartment / Society name</label>
+          <label>Address</label>
           <input type="text" placeholder="Prestige Lakeside, Whitefield" id="wl-apt">
         </div>
         <div class="form-field full">
@@ -1184,20 +1470,17 @@ footer {
             <button class="city-chip active" onclick="selectCity(this)">Bengaluru</button>
             <button class="city-chip" onclick="selectCity(this)">Mumbai</button>
             <button class="city-chip" onclick="selectCity(this)">Chennai</button>
-            <button class="city-chip" onclick="selectCity(this)">Pune</button>
-            <button class="city-chip" onclick="selectCity(this)">Hyderabad</button>
-            <button class="city-chip" onclick="selectCity(this)">Delhi NCR</button>
+           
           </div>
         </div>
         <div class="form-field full">
-          <label>Children's age group (select all that apply)</label>
+          <label>Customer Stream(select that apply)</label>
           <div class="city-chips">
           <button class="city-chip" onclick="toggleChip(this)">Family</button>
             <button class="city-chip" onclick="toggleChip(this)">Sports Academy</button>
             <button class="city-chip" onclick="toggleChip(this)">Cycling Club</button>
             <button class="city-chip" onclick="toggleChip(this)">School / Institution</button>
             <button class="city-chip" onclick="toggleChip(this)">Gated Community</button>
-            <button class="city-chip" onclick="toggleChip(this)">Fleet Operator</button>
           </div>
         </div>
       </div>
@@ -1215,7 +1498,7 @@ footer {
 <section class="gear-form-section" id="gear">
   <div class="gear-inner">
     <div class="gear-left">
-      <div class="section-label">Submit your gear</div>
+      <div class="section-label">Submit your gear - Launch City: Bengaluru</div>
       <h2>Turn outgrown gear into credits.</h2>
       <p>Have a cycle, cricket kit, football boots or toys your family or academy has outgrown? Submit to PLAYeBACK&#8482; &#8212; free doorstep pickup, certification and instant wallet credits. No haggling. Ever.</p>
       <div class="credits-breakdown">
@@ -1277,30 +1560,195 @@ footer {
   </div>
 </section>
 
-<!-- TRUST -->
-<section class="trust">
-  <div class="trust-inner">
-    <div class="trust-grid">
-      <div class="trust-item"><div class="trust-num">1,240+</div><div class="trust-lbl">products in certified inventory</div></div>
-      <div class="trust-item"><div class="trust-num">3,500+</div><div class="trust-lbl">families on the platform</div></div>
-      <div class="trust-item"><div class="trust-num">6 days</div><div class="trust-lbl">avg. collection to listed</div></div>
-      <div class="trust-item"><div class="trust-num">91%</div><div class="trust-lbl">would recommend PLAYeBACK&#8482;</div></div>
-    </div>
-    <div class="reviews">
-      <div class="review">
-        <p class="review-text">"PLAYeBACK&#8482; collected my son's old bicycle and I got credits towards his new scooter. Took less than a week and zero hassle. The SafeScore&#8482; report gave me the transparency I didn&#8217;t know I needed. I've recommended it to every parent in my apartment."</p>
-        <div class="review-author">Priya M. · Whitefield, Bengaluru</div>
+<!-- PLAYeBACK Partner Network-->
+<section class="replay" id="replay">
+  <div class="replay-inner">
+    <div class="sec-label">PLAYeBACK Partner Network</div>
+    <h2 class="sec-title">Built Through Trusted Specialists, Not Generic Handling.</h2>
+    <p class="sec-sub">PLAYeBACK is designed as a connected ecosystem of verified operators, specialists, and service partners working together to support asset care and lifecycle continuity.<br>Because one solution does not fit every asset.</p>
+
+
+<section class="pro" id="pro">
+  <div class="pro-inner">
+    <div class="pro-lbl">Be part of PLAYeBACK Network</div>
+    
+    <div class="pro-grid">
+      <div class="pro-card">
+        <div class="pro-name">Certified Care Partners</div>
+        <div class="pro-title"><p class="story-p">Specialized providers supporting category-specific handling, maintenance, cleaning, inspection, and operational care:
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Cycle & ebike service providers</div>
+          <div class="pro-item">Baby gear specialists</div>
+          <div class="pro-item">Sports equipment professionals</div>
+          <div class="pro-item">Electronics & device care operators</div>
+
+        </div>
       </div>
-      <div class="review">
-        <p class="review-text">"The PLAYeBACK&#8482; certification badge gave me confidence I never had buying second-hand online. I knew exactly what condition the product was in. The QR history was a brilliant touch."</p>
-        <div class="review-author">Rahul S. · Powai, Mumbai</div>
+      <div class="pro-card">
+        <div class="pro-name">Repair & Service Partners</div>
+        <div class="pro-title"><p class="story-p">Trusted technicians and repair businesses contributing expertise across supported categories:</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Maintenance</div>
+          <div class="pro-item">Restoration</div>
+          <div class="pro-item">Diagnostics</div>
+          <div class="pro-item">Service readiness</div>
+        </div>
       </div>
-      <div class="review">
-        <p class="review-text">&#8220;Our academy submits gear every quarter. The cycle fleet check and kit sanitization report has become part of our parent communication. Coaches trust the SafeScore&#8482;. It&#8217;s become a credibility asset for us.&#8221;</p>
-        <div class="review-author">Coach Suresh &#183; Premier Football Academy, Chennai</div>
+      <div class="pro-card">
+        <div class="pro-name">Storage & Holding Partners</div>
+        <div class="pro-title"><p class="story-p">Partners providing:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Secure temporary holding</div>
+          <div class="pro-item">Organized storage workflows</div>
+          <div class="pro-item">Asset readiness support</div>
+         
+        </div>
       </div>
+ <div class="pro-card">
+        <div class="pro-name">Logistics & Mobility Partners</div>
+        <div class="pro-title"><p class="story-p">Partners helping assets move safely through their journey:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Pickup</div>
+          <div class="pro-item">Delivery</div>
+          <div class="pro-item">Movement</div>
+         <div class="pro-item">Operational coordination</div>
+        </div>
+      </div>
+
+ <div class="pro-card">
+        <div class="pro-name">Replay & Ecosystem Partners</div>
+        <div class="pro-title"><p class="story-p">Partners helping extend asset utility, access, reuse, or next-life opportunities:
+</p>
+</div>
+        <div class="pro-items">
+          <div class="pro-item">Organizations</div>
+          <div class="pro-item">Communities</div>
+          <div class="pro-item">Institutions</div>
+         <div class="pro-item">Marketplaces</div>
+	<div class="pro-item">Affiliated service providers</div>
+        </div>
+      </div>
+
+      <div class="pro-card featured">
+        <div class="pro-name">Partners Opportunities</div>
+        <div class="pro-title"><p class="story-p">Partners can access opportunities:
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Expand service visibility</div>
+          <div class="pro-item">Reach asset owners through the platform</div>
+          <div class="pro-item">Offer specialized expertise</div>
+          <div class="pro-item">Participate in new lifecycle service models</div>
+	<div class="pro-item">Grow within a trusted operational ecosystem</div>
+        </div>
+      </div>
+
+
+<div class="pro-card featured">
+        <div class="pro-name">Partner Principles</div>
+        <div class="pro-title"><p class="story-p">PLAYeBACK aims to build PARTNERS around::
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Verification</div>
+          <div class="pro-item">Transparency</div>
+          <div class="pro-item">Responsible handling</div>
+          <div class="pro-item">Category expertise</div>
+	<div class="pro-item">Operational accountability</div>
+	<div class="pro-item">Customer trust</div>
+        </div>
+      </div>
+
+
+<div class="replay-card" style="background:var(--warm);border:1.5px dashed rgba(216,90,48,.4);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:6px">
+        <div style="font-size:28px">&#43;</div>
+        <div style="font-size:13.5px;font-weight:500;color:var(--bark)">Apply to join the PLAYeBACK Partner Ecosystem.</div>
+        
+        <a href="#partnerwaitlist" class="btn-main" style="margin-top:10px;font-size:13px;padding:9px 20px">Become Partner &#8594;</a>
+<div style="font-size:12px;color:var(--muted)">(OR)<br>Talk To Our Team or Join Pilot Network</div>
+      </div>
+
+
+
     </div>
   </div>
+<div>
+<h2 class="sec-title">Why Partner With PLAYeBACK?</h2>
+    <div class="pro-title"><p class="story-p">PLAYeBACK supports the journey. You choose the outcome. After CARE completion, eligible owners may choose:
+</p></div>
+        <div class="pro-items">
+          <div class="pro-item">Grow your visibility<br>Connect with asset owners and new demand channels.</div>
+          <div class="pro-item">Expand your services<br>Participate in emerging asset lifecycle workflows.</div>
+<div class="pro-item">Leverage your expertise<br>Bring your category knowledge into a trusted ecosystem.</div>
+<div class="pro-item">Build with us early<br>Join the launch-stage network shaping the PLAYeBACK operating model.</div>
+        </div>
+</div>
+</section>
+
+    
+  </div>
+</section>
+
+
+<!-- PARTNER WAITLIST --> <!-- TRUST -->
+<section class="trust">
+  <section class="partnerwaitlist" id="partnerwaitlist">
+  <div class="partnerwaitlist-inner">
+    <div class="section-label">Ready To Join The PARTNER Network?</div>
+    <h2>Become a PLAYeBACK Partner.</h2>
+    <p class="partnerwaitlist-sub">Are you a repair specialist, care operator, logistics provider, storage partner, service business, reseller, or ecosystem collaborator?<br><br>We are building the network. We’re Looking For Partners Across Categories — we'd like to hear from you.</p>
+    <div class="form-card" id="waitlist-form">
+      <div class="form-grid">
+        <div class="form-field">
+          <label>First name</label>
+          <input type="text" placeholder="Abc" id="wl-name">
+        </div>
+        <div class="form-field">
+          <label>WhatsApp number</label>
+          <input type="tel" placeholder="+91 XXXX XXXX" id="wl-phone">
+        </div>
+        <div class="form-field">
+          <label>Email address</label>
+          <input type="email" placeholder="abc@email.com" id="wl-email">
+        </div>
+        <div class="form-field">
+          <label>Business Address</label>
+          <input type="text" placeholder="XYZ, Whitefield" id="wl-apt">
+        </div>
+        <div class="form-field full">
+          <label>Select your city</label>
+          <div class="city-chips">
+            <button class="city-chip active" onclick="selectCity(this)">Bengaluru</button>
+            <button class="city-chip" onclick="selectCity(this)">Mumbai</button>
+            <button class="city-chip" onclick="selectCity(this)">Chennai</button>
+       
+          </div>
+        </div>
+        <div class="form-field full">
+          <label>Partnering Stream (select all that apply)</label>
+          <div class="city-chips">
+          <button class="city-chip" onclick="toggleChip(this)">Care & Maintenance</button>
+            <button class="city-chip" onclick="toggleChip(this)">Cycle & Ebike Service </button>
+            <button class="city-chip" onclick="toggleChip(this)">Storage & Holding</button>
+            <button class="city-chip" onclick="toggleChip(this)">Logistics & Pickup</button>
+            <button class="city-chip" onclick="toggleChip(this)">Cleaning & Refurbishment</button>
+            <button class="city-chip" onclick="toggleChip(this)">Resale & Circular Economy Collaborators>
+          </div>
+        </div>
+      </div>
+      <button class="form-btn" onclick="submitWaitlist()">Reserve my Partner spot →</button>
+      <p class="form-note">No spam. Ever. We'll only reach out when PLAYeBACK&#8482 launches in your city.</p>
+    </div>
+    <div class="success-msg" id="waitlist-success">
+      <h3>You're on the list! 🎉</h3>
+      <p>We'll WhatsApp you the moment PLAYeBACK&#8482 launches in your city.</p>
+    </div>
+  </div>
+</section>
+
 </section>
 
 <!-- FOOTER -->
@@ -1335,6 +1783,7 @@ footer {
       <a href="#pro">Pro plans</a>
       <a href="#waitlist">Waitlist</a>
       <a href="#gear">Submit gear</a>
+<a href="#partnerwaitlist">Become Partner</a>
       <a href="mailto:hello@PLAYeBACK.com">Contact</a>
     </div>
   </div>
