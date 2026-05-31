@@ -410,6 +410,27 @@ nav {
 .pro-item { font-size: 13px; color: #D3D1C7; padding-left: 16px; position: relative; }
 .pro-item::before { content: "✓"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
 
+
+/* PAR */
+.par { padding: 64px 40px; background: var(--deep); }
+.par-inner { max-width: 1200px; margin: 0 auto; }
+.par-lbl { font-size: 11px; font-weight: 500; color: var(--coral); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+.par h2 { font-family: 'Playfair Display', serif; font-size: clamp(28px,3.5vw,44px); font-weight: 700; color: #FAC775; letter-spacing: -1px; margin-bottom: 8px; }
+.par-sub { font-size: 15px; color: #EF9F27; font-weight: 300; max-width: 520px; margin-bottom: 32px; line-height: 1.7; }
+.par-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; }
+.par-card {
+  background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1);
+  border-radius: 20px; padding: 28px; transition: all .2s;
+}
+.pro-card:hover { background: rgba(255,255,255,.09); transform: translateY(-3px); }
+.pro-card.featured { background: rgba(216,90,48,.12); border-color: var(--coral); }
+.pro-name { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--coral); margin-bottom: 8px; }
+.pro-title { font-family: 'Playfair Display', serif; font-size: 18px; color: #FAC775; margin-bottom: 16px; }
+.pro-items { display: flex; flex-direction: column; gap: 7px; }
+.pro-item { font-size: 13px; color: #D3D1C7; padding-left: 16px; position: relative; }
+.pro-item::before { content: "✓"; color: var(--teal); position: absolute; left: 0; font-weight: 700; }
+
+
 /* CUSTOMERS */
 .customers { padding: 56px 40px; background: var(--cream); }
 .customers-inner { max-width: 1100px; margin: 0 auto; }
@@ -839,11 +860,13 @@ footer {
     </div>
   </a>
   <div class="nav-links">
-    <a href="#solutions">Services</a>
+    <a href="#">Home</a>
     <a href="#story">Our story</a>
     <a href="#how">How it works</a>
+    <a href="#solutions">Care&#8482;</a>
+    <a href="#safescore">SafeScore&#8482;</a>
     <a href="#replay">Replay&#8482;</a>
-    <a href="#pro">Pro plans</a>
+    <a href="#pro">Pro&#8482;</a>
     <a href="#gear">Submit Gear</a>
   </div>
   
@@ -1235,7 +1258,7 @@ Create a transparent ecosystem for both owners and care partners through:
     <p class="sec-sub">The Replay&#8482; marketplace carries certified pre-owned inventory across every category &#8212; every listing has a SafeScore&#8482; and a QR-coded asset history.</p>
 
 
-<section class="pro" id="pro">
+<section class="par" id="par">
   <div class="pro-inner">
     <div class="pro-lbl">HOW REPLAY WORKS</div>
     
@@ -1309,49 +1332,49 @@ You decide what happens next.
 
     <div class="replay-grid">
       <div class="replay-card">
-        <div class="rc-icon">&#128690;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">Firefox 20&#8243; cycle</div>
         <div class="rc-price">&#8377;3,200</div>
         <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 92</div>
         <p class="rc-details">Full service record &#183; Chain replaced &#183; QR history included</p>
       </div>
       <div class="replay-card">
-        <div class="rc-icon">&#128247;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">Adidas football boots</div>
         <div class="rc-price">&#8377;680</div>
         <div class="rc-grade" style="background:var(--warm);color:var(--bark)">Grade B &#183; Restored</div>
         <p class="rc-details">Sole restored &#183; Deodorized &#183; Size 6 &#183; Lightly worn</p>
       </div>
       <div class="replay-card">
-        <div class="rc-icon">&#127959;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">SG junior cricket kit</div>
         <div class="rc-price">&#8377;1,800</div>
         <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 89</div>
         <p class="rc-details">Full set &#183; Pads inspected &#183; Bat grip replaced</p>
       </div>
       <div class="replay-card">
-        <div class="rc-icon">&#9968;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">Skates size 4 (adjustable)</div>
         <div class="rc-price">&#8377;1,100</div>
         <div class="rc-grade" style="background:var(--warm);color:var(--bark)">Grade B &#183; Certified</div>
         <p class="rc-details">Blade check passed &#183; Buckle function verified</p>
       </div>
       <div class="replay-card">
-        <div class="rc-icon">&#128756;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">Micro scooter (6&#8211;10 yr)</div>
         <div class="rc-price">&#8377;1,450</div>
         <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 91</div>
         <p class="rc-details">Handlebar lock inspected &#183; Wheel bearings replaced</p>
       </div>
       <div class="replay-card">
-        <div class="rc-icon">&#129408;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">LEGO Creator 3-in-1</div>
         <div class="rc-price">&#8377;920</div>
         <div class="rc-grade" style="background:var(--warm);color:var(--bark)">Grade B &#183; Sanitized</div>
         <p class="rc-details">All pieces verified &#183; Deep sanitized &#183; No residue</p>
       </div>
       <div class="replay-card">
-        <div class="rc-icon">&#128692;</div>
+        <div class="rc-icon"></div>
         <div class="rc-name">Hero Sprint MTB</div>
         <div class="rc-price">&#8377;6,800</div>
         <div class="rc-grade" style="background:var(--teal-light);color:#085041">Grade A &#183; SafeScore 94</div>
@@ -1775,15 +1798,12 @@ You decide what happens next.
 
 </div>
     <div class="footer-links">
-      <a href="#solutions">Services</a>
-      <a href="#safescore">SafeScore&#8482;</a>
-      <a href="#story">Our story</a>
-      <a href="#how">How it works</a>
-      <a href="#replay">Replay&#8482;</a>
-      <a href="#pro">Pro plans</a>
-      <a href="#waitlist">Waitlist</a>
-      <a href="#gear">Submit gear</a>
-<a href="#partnerwaitlist">Become Partner</a>
+
+      <a href="#">Home</a>
+      <a href="#solutions">Care&#8482; Services</a>
+      <a href="#safescore">SafeScore&#8482; Guarantee</a>
+      <a href="#replay">Replay&#8482; Marketplace</a>
+      <a href="#pro">Pro&#8482; Plans</a>
       <a href="mailto:hello@PLAYeBACK.com">Contact</a>
     </div>
   </div>
